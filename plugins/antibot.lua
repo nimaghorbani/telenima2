@@ -112,10 +112,10 @@ return {
     'bot - <botId>: Disallow <botId> on this chat'
   },
   patterns = {
-    '^[!/]bot (+) (%d+)$',
-    '^[!/]bot (+) (%d+)$',
-    '^[!/]bot (+)$',
-    '^[!/]bot (-)$',
+    '^([Bb]ot) (+) (%d+)$',
+    '^([Bb]ot) (+) (%d+)$',
+    '^([Bb]ot) (+)$',
+    '^([Bb]ot) (-)$',
     '^!!tgservice (chat_add_user)$',
     '^!!tgservice (chat_add_user_link)$'
   },
