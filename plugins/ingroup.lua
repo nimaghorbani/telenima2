@@ -1286,8 +1286,6 @@ return {
   "^([Li]nk)$",
   "^([Kk]ickinactive)$",
   "^([Kk]ickinactive) (%d+)$",
-  "%[(photo)%]",
-  "^!!tgservice (.+)$",
   },
   run = run
 }
