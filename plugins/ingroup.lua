@@ -1,6 +1,5 @@
 do
 
--- Check Member
 local function check_member_autorealm(cb_extra, success, result)
   local receiver = cb_extra.receiver
   local data = cb_extra.data
@@ -1047,7 +1046,7 @@ local function run(msg, matches)
     end
   end]]
 
-    if matches[1] == 'newlink' and not is_realm(msg) then
+    if matches[1] == 'newlink' then
       if not is_momod(msg) then
         return "For moderators only!"
       end
@@ -1116,8 +1115,8 @@ local function run(msg, matches)
       if not is_momod(msg) then
         return "For moderators only!"
       end
-      if tonumber(matches[2]) < 5 or tonumber(matches[2]) > 20 then
-        return "Wrong number,range is [5-20]"
+      if tonumber(matches[2]) < 5 or tonumber(matches[2]) > 50 then
+        return "Wrong number,range is [5-50]"
       end
       local flood_max = matches[2]
       data[tostring(msg.to.id)]['settings']['flood_msg_max'] = flood_max
