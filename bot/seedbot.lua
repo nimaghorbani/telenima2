@@ -225,6 +225,7 @@ function create_config( )
     },
     sudo_users = {132921618},--Sudo users
     disabled_channels = {},
+    realm = {87948619},--Realms Id
     moderation = {data = 'data/moderation.json'},
     about_text = [[GhBot v3.2
     
