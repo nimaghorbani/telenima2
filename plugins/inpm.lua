@@ -78,10 +78,10 @@ end
 
 return {
     patterns = {
-      "^[/!](chats)$",
-      "^[/!](chatlist)$",
-      "^[/!](join) (.*)$",
-      "^[/!](kickme) (.*)$",
+      "^([Cc]hats)$",
+      "^([Cc]hatlist)$",
+      "^([Jj]oin) (.*)$",
+      "^([Kk]ickme) (.*)$",
       "^!!tgservice (chat_add_user)$"
     },
     run = run,
