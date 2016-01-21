@@ -2,7 +2,7 @@ local function run(msg, matches)
   if not is_sudo(msg) then -- For admins only !
     return 'sudo zone!'
   end
-	if matches[1] == 'maseage' and is_admin(msg) then
+	if matches[1] == 'message' and is_admin(msg) then
 		local response = matches[3]
 		send_large_msg("user#id"..matches[2], response)
 						local receiver = 'user#id'..user_id
@@ -11,7 +11,7 @@ local function run(msg, matches)
 	end
 return {
   patterns = {
-    "^([Mm]aseage) (%d+) (.*)$"
+    "^([Mm]essage) (%d+) (.*)$"
   },
   run = run
 }
