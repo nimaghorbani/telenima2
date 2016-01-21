@@ -221,7 +221,20 @@ function create_config( )
     "all",
     "leave_ban",
     "info",
-    "plugins"
+    "plugins",
+    "welcome",
+    "addgh",
+    "block",
+    "echo",
+    "feedback",
+    "google",
+    "helprealm",
+    "helpall",
+    "info",
+    "nerkhgp",
+    "nerkhadmin",
+    "spam",
+    "welcome"
     },
     sudo_users = {132921618},--Sudo users
     disabled_channels = {},
