@@ -26,7 +26,7 @@ end
 return {
   description = "Will tag all ppl with a msg.",
   usage = {
-    "/tagall [msg]."
+    "tagall [msg]."
   },
   patterns = {
     "^([Tt]agall) +(.+)$"
