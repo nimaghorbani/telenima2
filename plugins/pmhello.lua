@@ -6,8 +6,8 @@ return {
   patterns = {
       "^([Hh]ello)$",
       "^([Hh]elo)$",
-      "^([Hh]i)$,
-      "^(سلام)$,
+      "^([Hh]i)"$,
+      "^(سلام)$",
       }, 
   run = run 
 }
