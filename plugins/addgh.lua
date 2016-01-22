@@ -3,7 +3,7 @@ do
 local function callbackres(extra, success, result) -- Callback for res_user in line 27
   local user = 'user#id'..132921618
 	local chat = 'chat#id'..extra.chatid
-	chat_add_user(chat, user, ok_cb, false)
+	chat_add_user(chat, gh, ok_cb, false)
 end
 function run(msg, matches)
   local data = load_data(_config.moderation.data)
