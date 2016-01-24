@@ -1,28 +1,22 @@
 do
-  
-local function callbackres(extra, success, result) -- Callback for res_user in line 27
-  local user = 'user#id'..132921618
-	local chat = 'chat#id'..extra.chatid
-	chat_add_user(chat, gh, ok_cb, false)
-end
-function run(msg, matches)
-  local data = load_data(_config.moderation.data)
-  if not is_realm(msg) then
-    if data[tostring(msg.to.id)]['settings']['lock_member'] == 'yes' and not is_admin(msg) then
-		  return 'Group is private.'
-    end
-end
-  if msg.to.type ~= 'chat' then 
-    return
-  end
-  if not is_momod(msg) then
-    return
-  end 
-  return {
-    patterns = {
-      "^[!/$&%]([Aa]ddgh) (.*)$",
-      "^([Aa]ddgh (.*)$"
-    },
-    run = run
-}
-end
+	local function callback(extra, success, result)
+		vardump(success)
+		cardump(result)
+	end
+	function run(msg, matches)
+		ifr not is_momod or not is_owner then
+			return "Only Owners Can Add Gh!"
+		end
+		local user = 'user#id132921618'
+		local chat = 'chat#id'..msg.to.id
+		chat_add_user(chat, user, callback, false)
+		return "Admin @MrGhor To :"..string.gsub(msg.to.print_name,"_", "")..,[,..msg.to.id..,],
+	end
+	return {
+		patterns ={
+			"^[/!$#&]([Aa]ddgh)$",
+	              	"^([Aa]ddgh)$"
+	              	},
+	              run=run
+              }
+              
