@@ -1,12 +1,12 @@
 do
     local function action_by_reply(extra, success, result)
         local user_info = {}
-        local uhash = 'user:' ..result.from.id
+        local uhash = 'user:'..result.from.id
         local user = redis:hgetall(uhash)
-        local um_hash = 'msgs:' ..result.from.id.. ':' ..result.to.id
+        local um_hash = 'msgs:'..result.from.id..':'..result.to.id
         user_info.msgs = tonumber(redis:get(um_hash) or 0)
         user_info.name = user_print_name(user)..'['..result.from.id..']'
-        local msgs = '6-messages Sent : '..user_info.msgs
+        local msgs = '6-messages sent : '..user_info.msgs
         if result.from.username then
             user_name = '@'..result.from.username
         else
