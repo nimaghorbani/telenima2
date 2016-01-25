@@ -1,5 +1,5 @@
 do
-    local function action_by_reply(extera, seccess, result)
+    local function action_by_reply(extra, success, result)
         local user_info = {}
         local uhash = 'user:' ..result.from.id
         local user = redis:hgetall(uhash)
