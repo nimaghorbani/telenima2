@@ -18,11 +18,11 @@ do
         local user = 'user#id'..msg.from.id
         local chat = 'chat#id'..msg.to.id
         local data = load_data(_config.moderation.data)
-        if data[tostring('admins')][tostring('user_id')] then
+        if data[tostring('admins')][tostring(user_id)] then
             who = 'Admim'
-        elseif data[tostring('msg.to.id')]['moderators'][tostring('user_id')] then
+        elseif data[tostring(msg.to.id)]['moderators'][tostring(user_id)] then
             who = 'Moderator'
-        elseif data[tostring('msg.to.id')]['set_owner'] == tostring('user_id') then
+        elseif data[tostring(msg.to.id)]['set_owner'] == tostring(user_id) then
             who = 'Owner'
         elseif tonumber(result.from.id) == tonumber(our_id) then
             who = 'Group Creator'
@@ -54,6 +54,8 @@ do
                            "^([Ii]nfo)$"
                            },
                        run=run
-                       }
+                   }
+               end
+               
                
             
