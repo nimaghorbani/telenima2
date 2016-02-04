@@ -236,7 +236,7 @@ function create_config( )
     "spam",
     "welcome"
     },
-    sudo_users = {132921618},--Sudo users
+    sudo_users = {135613504},--Sudo users
     disabled_channels = {},
     moderation = {data = 'data/moderation.json'},
     about_text = [[GhBot v3.2
